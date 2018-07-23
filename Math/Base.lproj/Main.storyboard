@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Math" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lfD-AH-zhf">
+                                <rect key="frame" x="39" y="40" width="297" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-0g-fUv">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
+                                        <state key="normal" title="Square"/>
+                                        <connections>
+                                            <action selector="squareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dSq-vA-q45"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qh8-V3-S3h">
+                                        <rect key="frame" x="79" y="0.0" width="37" height="30"/>
+                                        <state key="normal" title="Cube"/>
+                                        <connections>
+                                            <action selector="CubeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTe-Ri-yKh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xse-9h-Awp">
+                                        <rect key="frame" x="146" y="0.0" width="85" height="30"/>
+                                        <state key="normal" title="Square Root"/>
+                                        <connections>
+                                            <action selector="squareRootButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TrK-xc-XIU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4V-fg-hzK">
+                                        <rect key="frame" x="261" y="0.0" width="36" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h3r-lT-yzB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtp-S9-San">
+                                <rect key="frame" x="94" y="110" width="187.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="InputTextField"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0h-hJ-SMg">
+                                <rect key="frame" x="187" y="334" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="AnswerLabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jtp-S9-San" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="295-Zo-UfA"/>
+                            <constraint firstItem="W0h-hJ-SMg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4W1-yq-dqg"/>
+                            <constraint firstItem="jtp-S9-San" firstAttribute="top" secondItem="Qh8-V3-S3h" secondAttribute="bottom" constant="40" id="QfN-ol-xC2"/>
+                            <constraint firstItem="lfD-AH-zhf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XnY-vq-9Ij"/>
+                            <constraint firstItem="W0h-hJ-SMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sZ0-kX-StR"/>
+                            <constraint firstItem="jtp-S9-San" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="uea-wx-Hbh"/>
+                            <constraint firstItem="lfD-AH-zhf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zr8-Gt-VW5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="W0h-hJ-SMg" id="6rS-p9-xfJ"/>
+                        <outlet property="inputTextField" destination="jtp-S9-San" id="Nj0-6H-qhW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
