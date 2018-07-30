@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculatorViewController.swift
 //  Math
 //
 //  Created by Robert Berry on 7/23/18.
@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func clearTextField(_ sender: Any) {
         
-        // When the button is tapped the inputTextField will return an empty String and the currency labels will return the String "0.00".
+        // When the button is tapped the inputTextField will return an empty String and the answerLabel will be an empty string.
         
         inputTextField.text = ""
         answerLabel.text = ""
@@ -51,10 +51,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.answerLabel.text = String(cube(number: Double(inputTextField.text!)!))
     }
     
-    
     @IBAction func squareRootButton(_ sender: Any) {
         
-        self.answerLabel.text = String(squareRoot(number: Double(inputTextField.text!)!))
+        // Conditional checks if the user has upgraded or not.
+        
+        if !UpgradeManager.sharedInstance.hasUpgraded() {
+            
+            let alertController = UIAlertController(title: "Upgrade",
+                                                    message: "Please upgrade to be able to calculate the square root of a number.",
+                                                    preferredStyle: .alert)
+            
+            let upgradeAction = UIAlertAction(title: "Upgrade",
+                                              style: .default,
+                                              handler: { (action) in
+                                                self.performSegue(withIdentifier: "ShowUpgradeViewController", sender: nil)
+            })
+            
+            let laterAction = UIAlertAction(title: "Later",
+                                            style: .cancel,
+                                            handler: nil)
+            
+            alertController.addAction(upgradeAction)
+           
+            alertController.addAction(laterAction)
+            
+            present(alertController, animated: true, completion: nil)
+       
+        } else {
+            
+            self.answerLabel.text = String(squareRoot(number: Double(inputTextField.text!)!))
+            
+        }
     }
     
     // MARK: Helper Methods

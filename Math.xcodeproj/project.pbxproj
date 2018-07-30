@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D222D3CA21065B2E006C7383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D3C921065B2E006C7383 /* AppDelegate.swift */; };
-		D222D3CC21065B2E006C7383 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D3CB21065B2E006C7383 /* ViewController.swift */; };
+		D222D3CC21065B2E006C7383 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D3CB21065B2E006C7383 /* CalculatorViewController.swift */; };
 		D222D3CF21065B2E006C7383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D222D3CD21065B2E006C7383 /* Main.storyboard */; };
 		D222D3D121065B2F006C7383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D222D3D021065B2F006C7383 /* Assets.xcassets */; };
 		D222D3D421065B2F006C7383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D222D3D221065B2F006C7383 /* LaunchScreen.storyboard */; };
 		D222D3DF21065B30006C7383 /* MathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D3DE21065B30006C7383 /* MathTests.swift */; };
 		D222D3EA21065B30006C7383 /* MathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D3E921065B30006C7383 /* MathUITests.swift */; };
+		D222D420210F6BAE006C7383 /* UpgradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D41F210F6BAE006C7383 /* UpgradeViewController.swift */; };
+		D222D422210F732C006C7383 /* UpgradeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D222D421210F732C006C7383 /* UpgradeManager.swift */; };
+		D222D425210F7AE1006C7383 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222D424210F7AE1006C7383 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		D222D3C621065B2E006C7383 /* Math.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Math.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D222D3C921065B2E006C7383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D222D3CB21065B2E006C7383 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D222D3CB21065B2E006C7383 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		D222D3CE21065B2E006C7383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D222D3D021065B2F006C7383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D222D3D321065B2F006C7383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		D222D3E521065B30006C7383 /* MathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D222D3E921065B30006C7383 /* MathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUITests.swift; sourceTree = "<group>"; };
 		D222D3EB21065B30006C7383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D222D41F210F6BAE006C7383 /* UpgradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeViewController.swift; sourceTree = "<group>"; };
+		D222D421210F732C006C7383 /* UpgradeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeManager.swift; sourceTree = "<group>"; };
+		D222D424210F7AE1006C7383 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D222D425210F7AE1006C7383 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				D222D3DD21065B30006C7383 /* MathTests */,
 				D222D3E821065B30006C7383 /* MathUITests */,
 				D222D3C721065B2E006C7383 /* Products */,
+				D222D423210F7AE1006C7383 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				D222D3C921065B2E006C7383 /* AppDelegate.swift */,
-				D222D3CB21065B2E006C7383 /* ViewController.swift */,
+				D222D3CB21065B2E006C7383 /* CalculatorViewController.swift */,
+				D222D421210F732C006C7383 /* UpgradeManager.swift */,
+				D222D41F210F6BAE006C7383 /* UpgradeViewController.swift */,
 				D222D3CD21065B2E006C7383 /* Main.storyboard */,
 				D222D3D021065B2F006C7383 /* Assets.xcassets */,
 				D222D3D221065B2F006C7383 /* LaunchScreen.storyboard */,
@@ -123,6 +133,14 @@
 				D222D3EB21065B30006C7383 /* Info.plist */,
 			);
 			path = MathUITests;
+			sourceTree = "<group>";
+		};
+		D222D423210F7AE1006C7383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D222D424210F7AE1006C7383 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +211,11 @@
 				TargetAttributes = {
 					D222D3C521065B2E006C7383 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					D222D3D921065B30006C7383 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -256,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D222D3CC21065B2E006C7383 /* ViewController.swift in Sources */,
+				D222D3CC21065B2E006C7383 /* CalculatorViewController.swift in Sources */,
+				D222D420210F6BAE006C7383 /* UpgradeViewController.swift in Sources */,
+				D222D422210F732C006C7383 /* UpgradeManager.swift in Sources */,
 				D222D3CA21065B2E006C7383 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R8P42GU68S;
 				INFOPLIST_FILE = Math/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R8P42GU68S;
 				INFOPLIST_FILE = Math/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
